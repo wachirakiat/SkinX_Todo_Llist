@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-07-08T00:08:16.735547" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcases" source="/Users/wachirakiat/Desktop/Project/SkinX/Appium test script for todo list app/testcases/testcases.robot">
+<test id="s1-t1" name="Verify User Can Add New Task" line="8">
+<kw name="Open Test Application" owner="todo_list_keywords" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>remote_url=http://localhost:4723/wd/hub</arg>
+<arg>deviceName=Pixel_8_API_34</arg>
+<arg>platformVersion=14</arg>
+<arg>platformName=Android</arg>
+<arg>appPackage=app.skinx.test.todo_list_app</arg>
+<arg>appActivity=app.skinx.test.todo_list_app.MainActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-07-08T00:08:16.828618" elapsed="18.209668"/>
+</kw>
+<status status="PASS" start="2024-07-08T00:08:16.828364" elapsed="18.212684"/>
+</kw>
+<kw name="Input new task" owner="todo_list_keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${todo_list.txt_edit}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T00:08:35.045869" elapsed="0.216214"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T00:08:35.262655" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText")'.</msg>
+<arg>${todo_list.txt_edit}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T00:08:35.262185" elapsed="0.057631"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-07-08T00:08:35.320491" level="INFO">Typing text 'Buy groceries' into text field 'android=new UiSelector().className("android.widget.EditText")'</msg>
+<arg>${todo_list.txt_edit}</arg>
+<arg>${task_name}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T00:08:35.319916" elapsed="1.086502"/>
+</kw>
+<arg>Buy groceries</arg>
+<status status="PASS" start="2024-07-08T00:08:35.042679" elapsed="1.363913"/>
+</kw>
+<kw name="Click add new task" owner="todo_list_keywords">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T00:08:36.409755" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.Button")'.</msg>
+<arg>${todo_list.btn_add}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T00:08:36.407628" elapsed="1.397314"/>
+</kw>
+<status status="PASS" start="2024-07-08T00:08:36.407059" elapsed="1.398717"/>
+</kw>
+<kw name="Verify Task Exists" owner="todo_list_keywords">
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-07-08T00:08:37.883881" level="INFO">Current page contains text 'Buy groceries'.</msg>
+<arg>${task_name}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-07-08T00:08:37.808128" elapsed="0.075796"/>
+</kw>
+<arg>Buy groceries</arg>
+<status status="PASS" start="2024-07-08T00:08:37.807104" elapsed="0.076860"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-07-08T00:08:37.884162" elapsed="0.532914"/>
+</kw>
+<doc>Verify that a user can add a new task to the todo list.</doc>
+<status status="PASS" start="2024-07-08T00:08:16.828103" elapsed="21.589363"/>
+</test>
+<test id="s1-t2" name="Verify User Can Mark Task As Completed" line="14">
+<kw name="Open Test Application" owner="todo_list_keywords" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>remote_url=http://localhost:4723/wd/hub</arg>
+<arg>deviceName=Pixel_8_API_34</arg>
+<arg>platformVersion=14</arg>
+<arg>platformName=Android</arg>
+<arg>appPackage=app.skinx.test.todo_list_app</arg>
+<arg>appActivity=app.skinx.test.todo_list_app.MainActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-07-08T00:08:38.418974" elapsed="5.419065"/>
+</kw>
+<status status="PASS" start="2024-07-08T00:08:38.418678" elapsed="5.420062"/>
+</kw>
+<kw name="Input new task" owner="todo_list_keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${todo_list.txt_edit}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T00:08:43.840644" elapsed="0.889391"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T00:08:44.731668" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText")'.</msg>
+<arg>${todo_list.txt_edit}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T00:08:44.730233" elapsed="0.071692"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-07-08T00:08:44.803277" level="INFO">Typing text 'Buy groceries' into text field 'android=new UiSelector().className("android.widget.EditText")'</msg>
+<arg>${todo_list.txt_edit}</arg>
+<arg>${task_name}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T00:08:44.802112" elapsed="1.026526"/>
+</kw>
+<arg>Buy groceries</arg>
+<status status="PASS" start="2024-07-08T00:08:43.839868" elapsed="1.988947"/>
+</kw>
+<kw name="Click add new task" owner="todo_list_keywords">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T00:08:45.830034" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.Button")'.</msg>
+<arg>${todo_list.btn_add}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T00:08:45.829335" elapsed="1.292398"/>
+</kw>
+<status status="PASS" start="2024-07-08T00:08:45.829079" elapsed="1.292811"/>
+</kw>
+<kw name="Mark Task As Completed" owner="todo_list_keywords">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T00:08:47.124744" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.CheckBox").instance(0)'.</msg>
+<arg>${todo_list.checkBox_${checkbox_index}}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T00:08:47.122678" elapsed="0.585465"/>
+</kw>
+<arg>0</arg>
+<status status="PASS" start="2024-07-08T00:08:47.122172" elapsed="0.586400"/>
+</kw>
+<kw name="Verify Task Is Completed" owner="todo_list_keywords">
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2024-07-08T00:08:47.749601" level="INFO">Element 'android=new UiSelector().className("android.widget.CheckBox").instance(0)' attribute 'checked' value 'true' </msg>
+<msg time="2024-07-08T00:08:47.749815" level="INFO">${checkbox} = true</msg>
+<var>${checkbox}</var>
+<arg>${todo_list.checkBox_${checkbox_index}}</arg>
+<arg>checked</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2024-07-08T00:08:47.710231" elapsed="0.039617"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${checkbox}</arg>
+<arg>true</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-07-08T00:08:47.750081" elapsed="0.000885"/>
+</kw>
+<arg>0</arg>
+<arg>Buy groceries</arg>
+<status status="PASS" start="2024-07-08T00:08:47.709390" elapsed="0.041666"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-07-08T00:08:47.752046" elapsed="0.462156"/>
+</kw>
+<doc>Verify that a user can mark a task as completed.</doc>
+<status status="PASS" start="2024-07-08T00:08:38.418022" elapsed="9.796379"/>
+</test>
+<test id="s1-t3" name="Verify User Can Delete Task" line="21">
+<kw name="Open Test Application" owner="todo_list_keywords" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>remote_url=http://localhost:4723/wd/hub</arg>
+<arg>deviceName=Pixel_8_API_34</arg>
+<arg>platformVersion=14</arg>
+<arg>platformName=Android</arg>
+<arg>appPackage=app.skinx.test.todo_list_app</arg>
+<arg>appActivity=app.skinx.test.todo_list_app.MainActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-07-08T00:08:48.215659" elapsed="5.598057"/>
+</kw>
+<status status="PASS" start="2024-07-08T00:08:48.215398" elapsed="5.598942"/>
+</kw>
+<kw name="Input new task" owner="todo_list_keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${todo_list.txt_edit}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T00:08:53.816317" elapsed="0.926591"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T00:08:54.744610" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText")'.</msg>
+<arg>${todo_list.txt_edit}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T00:08:54.743128" elapsed="0.088990"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-07-08T00:08:54.835278" level="INFO">Typing text 'Buy groceries' into text field 'android=new UiSelector().className("android.widget.EditText")'</msg>
+<arg>${todo_list.txt_edit}</arg>
+<arg>${task_name}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T00:08:54.832572" elapsed="1.094238"/>
+</kw>
+<arg>Buy groceries</arg>
+<status status="PASS" start="2024-07-08T00:08:53.815487" elapsed="2.112695"/>
+</kw>
+<kw name="Click add new task" owner="todo_list_keywords">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T00:08:55.932205" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.Button")'.</msg>
+<arg>${todo_list.btn_add}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T00:08:55.930124" elapsed="1.716017"/>
+</kw>
+<status status="PASS" start="2024-07-08T00:08:55.929405" elapsed="1.717029"/>
+</kw>
+<kw name="Delete Task" owner="todo_list_keywords">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T00:08:57.649695" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Buy groceries"]/android.widget.Button'.</msg>
+<msg time="2024-07-08T00:08:58.502213" level="INFO">xpath criteria: //android.view.View[@content-desc="Buy groceries"]/android.widget.Button</msg>
+<arg>xpath=//android.view.View[@content-desc="${task_name}"]/android.widget.Button</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T00:08:57.647826" elapsed="0.854798"/>
+</kw>
+<arg>Buy groceries</arg>
+<status status="PASS" start="2024-07-08T00:08:57.647018" elapsed="0.855976"/>
+</kw>
+<kw name="Verify Task Does Not Exist" owner="todo_list_keywords">
+<kw name="Page Should Not Contain Element" owner="AppiumLibrary">
+<msg time="2024-07-08T00:08:58.598938" level="INFO">Current page not contains element 'xpath=//android.view.View[@content-desc="Buy groceries"]'.</msg>
+<msg time="2024-07-08T00:08:58.598991" level="INFO">xpath criteria: //android.view.View[@content-desc="Buy groceries"]</msg>
+<arg>xpath=//android.view.View[@content-desc="${task_name}"]</arg>
+<doc>Verifies that current page not contains `locator` element.</doc>
+<status status="PASS" start="2024-07-08T00:08:58.504494" elapsed="0.094520"/>
+</kw>
+<arg>Buy groceries</arg>
+<status status="PASS" start="2024-07-08T00:08:58.503726" elapsed="0.095336"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-07-08T00:08:58.599247" elapsed="0.518218"/>
+</kw>
+<doc>Verify that a user can delete a task from the todo list.</doc>
+<status status="PASS" start="2024-07-08T00:08:48.214796" elapsed="10.902963"/>
+</test>
+<status status="PASS" start="2024-07-08T00:08:16.736107" elapsed="42.384912"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Testcases">Testcases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
